@@ -74,7 +74,7 @@ public class SongManager : MonoBehaviour
     {
         yield return new WaitForSeconds(delay);
         // Load your main menu scene here
-        UnityEngine.SceneManagement.SceneManager.LoadScene("MainMenu");
+        UnityEngine.SceneManagement.SceneManager.LoadScene("Start");
     }
 
     public static double GetAudioSourceTime()
