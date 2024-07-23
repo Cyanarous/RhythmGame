@@ -816,7 +816,7 @@ MonoBehaviour:
   - {fileID: 1340225877}
   - {fileID: 536213782}
   songDelayInSeconds: 0
-  marginOfError: 0.1
+  marginOfError: 0.2
   inputDelayInMilliseconds: 0
   fileLocation: LoveStoryMidi.mid
   noteTime: 1
