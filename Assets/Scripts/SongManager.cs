@@ -67,11 +67,18 @@ public class SongManager : MonoBehaviour
     public void StartSong()
     {
         audioSource.Play();
+        StartCoroutine(WaitAndReturnToMainMenu(audioSource.clip.length + 2f)); // Add 2 seconds to the song length
+    }
+
+    private IEnumerator WaitAndReturnToMainMenu(float delay)
+    {
+        yield return new WaitForSeconds(delay);
+        // Load your main menu scene here
+        UnityEngine.SceneManagement.SceneManager.LoadScene("MainMenu");
     }
 
     public static double GetAudioSourceTime()
     {
         return (double)Instance.audioSource.timeSamples / Instance.audioSource.clip.frequency;
     }
-
 }
